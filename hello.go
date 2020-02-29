@@ -55,10 +55,10 @@ func editHandler(writer http.ResponseWriter, request *http.Request) {
 }
 
 func viewHandler(w http.ResponseWriter, r *http.Request) {
-	title := r.URL.Path[len("First/view/"):]
+	title := r.URL.Path[len("/view/"):]
 	page, _ := loadPage(title)
 
-	t, _ := template.ParseFiles("First/view.html")
+	t, _ := template.ParseFiles("view.html")
 	t.Execute(w, page)
 	//fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", page.Title, page.Body)
 }

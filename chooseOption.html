@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Display Option</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+
+<body>
+
+    <p><b>Please select favourite hero</b></p>
+    
+    <form action="/showSelectedOption/" method="POST">
+    <p><input name="chooseHero" type="radio" value="{{.OptionOne}}">{{.OptionOne}}</p>
+    <p><input name="chooseHero" type="radio" value="{{.OptionTwo}}">{{.OptionTwo}}</p>
+    <p><input name="chooseHero" type="radio" value="{{.OptionThree}}">{{.OptionThree}}</p>
+    <input type="text" name="Thename">
+    <p><input type="submit" value="Select"></p>
+    </form>
+    
+</body>
+</html>
